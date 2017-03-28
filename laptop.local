@@ -33,3 +33,5 @@ brew install 'neovim'
 
 fancy_echo "Changing your shell to fish ..."
   chsh -s $(which fish)
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
