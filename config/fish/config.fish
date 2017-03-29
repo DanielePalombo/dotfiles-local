@@ -12,7 +12,6 @@ test -d /usr/local/bin           ; and set PATH /usr/local/bin $PATH
 # Navigation
 function ll    ; tree --dirsfirst -ChFupDaLg 1 $argv ; end
 
-function be        ; bundle exec $argv ; end
 function d        ; du -h -d=1 $argv ; end
 function df       ; command df -h $argv ; end
 function f        ; foreman run bundle exec $argv ; end
@@ -46,3 +45,6 @@ status --is-interactive; and . (rbenv init -|psub)
 
 # hub
 eval (hub alias -s)
+
+# Set fzf in halt height
+set -U FZF_TMUX 1

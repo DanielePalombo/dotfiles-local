@@ -21,17 +21,25 @@ brew install 'htop'
 brew install 'rbenv-aliases'
 brew install 'rbenv-default-gems'
 
-brew install 'fish'
-grep -q -F '/usr/local/bin/fish' /etc/shells || echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-
 brew install 'wget'
+brew install 'fzf'
 brew install 'phantomjs'
 # brew install 'elasticsearch'
 
 brew tap neovim/homebrew-neovim
 brew install 'neovim'
 
+brew install 'fish'
+grep -q -F '/usr/local/bin/fish' /etc/shells || echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 fancy_echo "Changing your shell to fish ..."
   chsh -s $(which fish)
 
+# Install OMF
+curl -L https://get.oh-my.fish | fish
+
+# Install fisherman
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+fisher fzf
+
+# Install tpm (Tmux Plugin Manager)
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
