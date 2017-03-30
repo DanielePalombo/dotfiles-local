@@ -1,6 +1,8 @@
 set fish_greeting
 
-set -x EDITOR nvim
+set -x VISUAL nvim
+set -x EDITOR "$VISUAL"
+set -x BUNDLER_EDITOR "nvim"
 set -x GREP_COLOR "1;37;45"
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
@@ -48,3 +50,8 @@ eval (hub alias -s)
 
 # Set fzf in halt height
 set -U FZF_TMUX 1
+
+# aliases
+if test -e ~/.aliases
+  source ~/.aliases
+end
