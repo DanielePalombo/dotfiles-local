@@ -28,6 +28,7 @@ brew install 'phantomjs'
 
 brew tap neovim/homebrew-neovim
 brew install 'neovim'
+pip3 install --user neovim
 
 brew install 'fish'
 grep -q -F '/usr/local/bin/fish' /etc/shells || echo "/usr/local/bin/fish" | sudo tee -a /etc/shells

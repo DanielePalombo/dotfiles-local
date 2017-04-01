@@ -1,0 +1,70 @@
+" Colors
+Plug 'rakr/vim-one'
+" Plug 'morhetz/gruvbox'
+
+" Other plugins
+Plug 'tpope/vim-unimpaired'
+
+" File System
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'danro/rename.vim'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'gabesoft/vim-ags'
+Plug 'mileszs/ack.vim'
+
+
+" UI
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
+Plug 'mhinz/vim-startify'
+
+" Editing
+Plug 'tpope/vim-commentary'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-surround'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'cohama/lexima.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'wikitopian/hardmode'
+
+" Motion
+Plug 'vim-scripts/matchit.zip'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'justinmk/vim-sneak'
+Plug 'rhysd/clever-f.vim'
+Plug 'bkad/CamelCaseMotion'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv', { 'on': 'Gitv' }
+
+" Tmux
+Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'edkolev/tmuxline.vim'
+Plug 'tmux-plugins/vim-tmux'
+
+" Ruby on Rails
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rake'
+Plug 'sunaku/vim-ruby-minitest'
+Plug 'skalnik/vim-vroom'
+Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
+
+" Fish
+Plug 'dag/vim-fish'
+
+" Language
+Plug 'sheerun/vim-polyglot'
+
+Plug 'vim-syntastic/syntastic'
+Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
+Plug 'ntpeters/vim-better-whitespace'
+
+call plug#end()

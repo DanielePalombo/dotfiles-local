@@ -1,0 +1,55 @@
+source $HOME/.vim/keys.vim
+
+" nnoremap <C-r> :source $MYVIMRC<CR>
+
+set autoread
+set history=1000
+
+if (empty($TMUX))
+  if (has("nvim"))
+		"For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+		let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+		let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
+syntax on
+
+set background=dark        " Use one dark theme
+colorscheme one        " Use one theme
+let g:airline_theme='one'
+
+highlight ColorColumn ctermbg=236
+
+" General behavior
+set clipboard+=unnamed      " Copy and Paste from the system clipboard
+set nowrap
+set relativenumber          " show relative line numbers
+set ttyfast                 " faster redrawing
+set wildmenu                " enhanced command line completion
+set scrolloff=7             " lines of text around cursor
+set sidescroll=1            " scroll side column one by one
+set sidescrolloff=10        " columns of text around cursor
+set cursorline              " underline cursor
+
+" Searching
+set ignorecase              " case insensitive searching
+set smartcase               " case-sensitive if expresson contains a capital letter
+set hlsearch                " highlight search results
+set incsearch               " set incremental search, like modern browsers
+set magic                   " Set magic on, for regex
+
+set showmatch               " show matching braces
+set mat=2                   " how many tenths of a second to blink
+
+" error bells
+set noerrorbells
+set visualbell
+
