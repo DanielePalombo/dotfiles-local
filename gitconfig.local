@@ -1,0 +1,31 @@
+[alias]
+  i = init
+  c = "commit -m"
+  a = add
+  s = status
+  d = diff --color-words
+  pl = pull
+  ps = push
+  br = branches
+
+  l = log -n15 --color --graph --pretty=format:'%Cred%h%Creset - %Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ll = log --stat --abbrev-commit
+  lll = !git lg -30
+
+  la = !git lg --all
+[core]
+  pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[github]
+  user = DanielePalombo
+[help]
+  autocorrect = 1
+[hub]
+  protocol = ssh
+[pull]
+  rebase = true
+[user]
+  name = Daniele Palombo
+  email = daniele.palombo@gmail.com
