@@ -1,6 +1,6 @@
 " Colors
-Plug 'rakr/vim-one'
-" Plug 'morhetz/gruvbox'
+" Plug 'rakr/vim-one'
+Plug 'morhetz/gruvbox'
 
 " Other plugins
 Plug 'tpope/vim-unimpaired'
@@ -24,7 +24,6 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'cohama/lexima.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -42,12 +41,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 
-" Tmux
-Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'edkolev/tmuxline.vim'
-Plug 'tmux-plugins/vim-tmux'
 
 " Ruby on Rails
 Plug 'tpope/vim-rails'
@@ -63,8 +56,6 @@ Plug 'dag/vim-fish'
 " Language
 Plug 'sheerun/vim-polyglot'
 
-Plug 'vim-syntastic/syntastic'
-Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
 Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()

@@ -22,9 +22,9 @@ endif
 
 syntax on
 
-set background=dark        " Use one dark theme
-colorscheme one        " Use one theme
-let g:airline_theme='one'
+set background=dark        " Use gruvbox dark theme
+colorscheme gruvbox        " Use gruvbox theme
+let g:airline_theme='gruvbox'
 
 highlight ColorColumn ctermbg=236
 

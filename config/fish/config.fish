@@ -8,8 +8,9 @@ set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
 
 # Paths
-test -d /usr/local/sbin          ; and set PATH /usr/local/sbin $PATH
-test -d /usr/local/bin           ; and set PATH /usr/local/bin $PATH
+test -d /usr/local/sbin ; and set PATH /usr/local/sbin $PATH
+test -d /usr/local/bin  ; and set PATH /usr/local/bin $PATH
+test -d ~/.bin          ; and set PATH ~/.bin $PATH
 
 # Navigation
 function ll    ; tree --dirsfirst -ChFupDaLg 1 $argv ; end
@@ -55,3 +56,18 @@ set -U FZF_TMUX 1
 if test -e ~/.aliases
   source ~/.aliases
 end
+
+# Create a JAVA_HOME variable, determined dynamically
+# export JAVA_HOME=$(/usr/libexec/java_home)
+# Add that to the global PATH variable
+# export PATH=${JAVA_HOME}/bin:$PATH
+# Set Android_HOME
+set -x ANDROID_HOME '/usr/local/Caskroom/android-sdk/25.2.3'
+# Add the Android SDK to the ANDROID_HOME variable
+set -gx PATH $ANDROID_HOME/platform-tools $PATH
+set -gx PATH $ANDROID_HOME/tools $PATH
+#Set GRADLE_HOME
+# export GRADLE_HOME=/Library/gradle/gradle-3.2
+# export PATH=$PATH:$GRADLE_HOME/bin
+
+# set -g fish_user_paths "/usr/local/opt/mysql@5.5/bin" $fish_user_paths

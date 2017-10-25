@@ -17,7 +17,7 @@ bind C-a send-prefix
 # The "#{mouse_any_flag}" check just sends scrolls to any program running that
 # has mouse support (like vim).
 #bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if # -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e'"
-bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e'"
+#bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'copy-mode -e'"
 
 # <prefix> p to paste buffer
 unbind p
@@ -54,9 +54,17 @@ bind -n C-u send-keys -R \; send-keys C-l \; clear-history
 
 # act like vim
 setw -g mode-keys vi
-bind Enter copy-mode
-bind -t vi-copy H start-of-line
-bind -t vi-copy L end-of-line
+# bind Enter copy-mode
+
+# https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
+
+# Setup 'v' to begin selection as in Vim
+bind-key -t vi-copy v begin-selection
+bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+
+# Update default binding of `Enter` to also use copy-pipe
+unbind -t vi-copy Enter
+bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 
 # ==============================================================================
 # Status bar settings

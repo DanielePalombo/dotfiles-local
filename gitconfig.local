@@ -14,7 +14,7 @@
 
   la = !git lg --all
 [core]
-  pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+  pager = diff-so-fancy | less --tabs=1,5 -R
 [filter "media"]
   clean = git-media-clean %f
   smudge = git-media-smudge %f
