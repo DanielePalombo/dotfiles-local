@@ -62,7 +62,8 @@ end
 # Add that to the global PATH variable
 # export PATH=${JAVA_HOME}/bin:$PATH
 # Set Android_HOME
-set -x ANDROID_HOME '/usr/local/Caskroom/android-sdk/25.2.3'
+#set -x ANDROID_HOME '/usr/local/Caskroom/android-sdk/25.2.3'
+set -x ANDROID_HOME '~/Library/Android/sdk/'
 # Add the Android SDK to the ANDROID_HOME variable
 set -gx PATH $ANDROID_HOME/platform-tools $PATH
 set -gx PATH $ANDROID_HOME/tools $PATH
@@ -71,3 +72,5 @@ set -gx PATH $ANDROID_HOME/tools $PATH
 # export PATH=$PATH:$GRADLE_HOME/bin
 
 # set -g fish_user_paths "/usr/local/opt/mysql@5.5/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/elasticsearch@5.6/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/elasticsearch@5.6/bin" $fish_user_paths

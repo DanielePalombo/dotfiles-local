@@ -38,14 +38,14 @@ function solidus_rspec_version
   set -l command
 
   switch $argv[1]
-    case v1.0 v1.1 v1.2 v1.3 v1.4 v2.0 v2.1 v2.2 v2.3 master
+    case v1.0 v1.1 v1.2 v1.3 v1.4 v2.0 v2.1 v2.2 v2.3 v2.4 master
       echo $argv | read -l branch arguments
       echo "Test only "$branch
       set branches $branch
     case \*
       echo $argv | read -l arguments
       echo "Test on all branches"
-      set branches v1.0 v1.1 v1.2 v1.3 v1.4 v2.0 v2.1 v2.2 v2.3 master
+      set branches v1.0 v1.1 v1.2 v1.3 v1.4 v2.0 v2.1 v2.2 v2.3 v2.4 master
   end
 
   for branch in $branches
