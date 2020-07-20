@@ -6,6 +6,7 @@ set -x BUNDLER_EDITOR "nvim"
 set -x GREP_COLOR "1;37;45"
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
+set -x DISABLE_SPRING 1
 
 # Paths
 test -d /usr/local/sbin ; and set PATH /usr/local/sbin $PATH
