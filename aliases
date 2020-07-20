@@ -28,5 +28,13 @@ balias gs "g status"
 balias gd "g diff"
 balias gb "git browse"
 
+balias dru "~/.rbenv/versions/2.4.1/bin/dru"
+balias docker-sync "/Users/danielepalombo/.rbenv/versions/2.4.1/bin/docker-sync"
+balias d "dru"
+balias dup "dru up; and dru attach app"
+balias rubocopmaster "git diff-tree -r --no-commit-id --name-only head origin/master | xargs rubocop"
+
+
 # Set bin Path
 set PATH ~/.bin ./bin $PATH
+
